@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment { 
+        ENV_URL = 'pipeline.google.com'
+    }    
     stages{
         stage('stage one') {
             steps {
@@ -7,12 +10,14 @@ pipeline {
                         echo devops
                         echo aws
                         echo batch 54
+                        echo URL name is ${ENV_URL}
                     '''
             }
         }
         stage('stage two') {
             steps {
                 echo "this is stage two" 
+                echo URL name is ${ENV_URL}
             }
         } 
         stage('stage three') {
