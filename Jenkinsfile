@@ -17,7 +17,7 @@ pipeline {
         stage('stage two') {
             steps {
                 echo "this is stage two" 
-                echo "URL name is ${ENV_URL}"
+                echo "URL name is ${ENV_URL}"    // this is astage level varible it can be used on this stage only 
             }
         } 
         stage('stage three') {
