@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment { 
-        ENV_URL = 'pipeline.google.com'    //  its a pipeline variable every stage can use it by using a variable
+        ENV_URL = "pipeline.google.com"    //  its a pipeline variable every stage can use it by using a variable
     }    
     stages{
         stage('stage one') {
@@ -15,16 +15,17 @@ pipeline {
             }
         }
         stage('stage two') {
-            environment {
-                ENV_URL = 'stage.google.com'              // this is a stage level (local) varible it can be used on this stage only
+            environment {                            
+                ENV_URL = "stage.google.com"              // this is a stage level (local) varible it can be used on this stage only
+            }
             steps {
                 echo "this is stage two" 
                 echo "URL name is ${ENV_URL}"    // this is a stage level (local) varible it can be used on this stage only 
-            }
-        } 
+            } 
         stage('stage three') {
             steps {
-                echo "this is stage three" 
+                echo "this is stage three"
+                echo "URL name is ${ENV_URL}"
             }
         }               
     }
