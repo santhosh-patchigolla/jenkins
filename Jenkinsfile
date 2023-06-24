@@ -17,7 +17,7 @@ pipeline {
         stage('stage two') {
             steps {
                 echo "this is stage two" 
-                echo URL name is ${ENV_URL}
+                echo "URL name is ${ENV_URL}"
             }
         } 
         stage('stage three') {
