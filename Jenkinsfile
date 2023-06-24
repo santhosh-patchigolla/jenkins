@@ -17,16 +17,14 @@ pipeline {
         stage('stage two') {
             environment {                            
                 ENV_URL = "stage.google.com"              // this is a stage level (local) varible it can be used on this stage only
-            }
-            steps {
-                echo "this is stage two" 
-                echo "URL name is ${ENV_URL}"    // this is a stage level (local) varible it can be used on this stage only 
             } 
-        stage('stage three') {
+                       
             steps {
-                echo "this is stage three"
-                echo "URL name is ${ENV_URL}"
-            }
+
+                echo "this is stage two" 
+                echo "Name of the URL is ${ENV_URL}"     
+            } 
+
         }               
     }
 }
