@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment { 
-        ENV_URL = 'pipeline.google.com'
+        ENV_URL = 'pipeline.google.com'    # its a pipeline variable every stage can use it by using a variable
     }    
     stages{
         stage('stage one') {
