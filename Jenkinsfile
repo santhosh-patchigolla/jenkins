@@ -25,6 +25,18 @@ pipeline {
                 echo "Name of the URL is ${ENV_URL}"     
             } 
 
-        }               
+        } 
+            stage('stage two') {
+            environment {                            
+            } 
+                       
+            steps {
+
+                echo "this is stage two" 
+                echo "Name of the URL is ${ENV_URL}"     
+            } 
+
+        } 
+
     }
 }
