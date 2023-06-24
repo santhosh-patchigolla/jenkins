@@ -3,7 +3,11 @@ pipeline {
     stages{
         stage('stage one') {
             steps {
-                echo "this is stage one" 
+                    sh '''
+                        echo devops
+                        echo aws
+                        echo batch 54
+                    '''
             }
         }
         stage('stage two') {
