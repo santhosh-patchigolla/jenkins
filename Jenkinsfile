@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment { 
         ENV_URL         = "pipeline.google.com"    //  its a pipeline variable every stage can use it by using a variable
-        SSHCRED         = credentials('SSH_CRED')  // took from manage jenkins> security> credentials  (here we can store the secrets in the Jenkins and it is more important)
+        SSHCRED         = credentials('SSH_CRED')  // took from manage jenkins> security> credentials  (here we can store the secrets in the Jenkins and it is more important in Jenkins part)
     }
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Varma', description: 'Who should I say hello to?')
