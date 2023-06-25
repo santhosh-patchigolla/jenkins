@@ -25,6 +25,17 @@ pipeline {
                 echo "this is stage two" 
                 echo "Name of the URL is ${ENV_URL}"     
             } 
-        }                           
+        } 
+
+        stage('Stage THREE') {
+            steps {                 
+                sh ''' 
+                echo "This is stage three"
+                echo "Name of the URL is ${ENV_URL}"
+                echo -e "\\e[31m Hai"
+
+                ''' 
+            }
+        }                                          
     }
 }
