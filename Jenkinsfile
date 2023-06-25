@@ -11,7 +11,7 @@ pipeline {
         choice(name: 'CHOICE', choices: ['Dev', 'NonProd', 'Prod'], description: 'Pick something')
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }  
-    triggers { cron('H/1 * * * *') }     
+    triggers { pollSCM('H/1 * * * *') }     
     stages{
         stage('stage one') {
             steps {
