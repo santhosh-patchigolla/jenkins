@@ -1,8 +1,9 @@
 pipeline {
     agent any
     environment { 
-        ENV_URL = "pipeline.google.com"    //  its a pipeline variable every stage can use it by using a variable
-    }    
+        ENV_URL         = "pipeline.google.com"    //  its a pipeline variable every stage can use it by using a variable
+        SSHCRED         = credentials('SSH_CRED')  // took from manage jenkins> security> credentials  
+    }   
     stages{
         stage('stage one') {
             steps {
@@ -11,6 +12,8 @@ pipeline {
                         echo aws
                         echo batch 54
                         echo URL name is ${ENV_URL}
+
+                        env
                     '''
             }
         }
