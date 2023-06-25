@@ -42,10 +42,11 @@ pipeline {
                 sh ''' 
                 echo "This is stage three"
                 echo "Name of the URL is ${ENV_URL}"
-                echo -e "\\e[31m Hai"
 
                 ''' 
             }
         }
     }
 }
+
+// no changes added 
