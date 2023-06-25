@@ -30,7 +30,7 @@ pipeline {
 
         stage('Stage TWO') {
             environment {
-                ENV_URL = "stage.google.com"                  // Stage  variab declared here
+                ENV_URL = "stage.google.com"                  // Stage  variables declared here if we declared here means It wont take from pipeline variable(global varailble)
             }
             steps {                 
                 echo  "This is stage two"
