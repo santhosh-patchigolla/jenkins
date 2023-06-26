@@ -35,11 +35,11 @@ pipeline {
             }
 
             input {                                            // using this input we can break the state and ask for the valuer once you give it will run the stage of the pipeline. Usually this is used if this stage createing any changes to the Infra they need to acknowledged.
-                message "Should we continue?"
+                message "Are you interested to continue?"
                 ok "Yes, we should."
                 submitter "alice,bob"
                 parameters {
-                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                    string(name: 'PERSON', defaultValue: 'santhosh', description: 'Who should I say Hi to?')
                 }
             }            
             steps {                 
