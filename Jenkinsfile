@@ -51,7 +51,8 @@ pipeline {
         stage('Stage THREE') {
             when { 
                  branch 'dev'
-                 changeset "**/*.js" }        // this when is useful only it should run the stage only on the specfic branch and the "changeset" is useful it notice any changes on the  .js file"
+                 changeset "**/*.js" 
+            }        // this when is useful only it should run the stage only on the specfic branch and the "changeset" is useful it notice any changes on the  .js file"
             steps {                 
                 sh ''' 
                 echo "This is stage three"
