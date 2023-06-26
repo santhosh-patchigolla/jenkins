@@ -34,15 +34,15 @@ pipeline {
                 ENV_URL = "stage.google.com"                  // Stage  variables declared here if we declared here means It wont take from pipeline variable(global varailble)
             }
 
-            input {                                            // using this input we can break the state and ask for the valuer once you give it will run the stage of the pipeline. Usually this is used if this stage createing any changes to the Infra they need to acknowledged.
-                message "Are you interested to continue?"
-                ok "Yes, we should."
-                submitter "alice,bob"
-                parameters {
-                    string(name: 'PERSON', defaultValue: 'santhosh', description: 'Who should I say Hi to?')
-                }
+            // input {                                            // using this input we can break the state and ask for the valuer once you give it will run the stage of the pipeline. Usually this is used if this stage createing any changes to the Infra they need to acknowledged.
+            //     message "Are you interested to continue?"
+            //     ok "Yes, we should."
+            //     submitter "alice,bob"
+            //     parameters {
+            //         string(name: 'PERSON', defaultValue: 'santhosh', description: 'Who should I say Hi to?')
+            //     }
 
-            }            
+            // }            
             steps {                 
                 echo  "This is stage two"
             }
