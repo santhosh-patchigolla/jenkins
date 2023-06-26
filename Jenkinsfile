@@ -4,13 +4,24 @@ pipeline {
         ENV_URL         = "pipeline.google.com"                  //  its a pipeline variable every stage can use it by using a variable
         SSHCRED         = credentials('SSH_CRED')                // took from manage jenkins> security> credentials  (here we can store the secrets in the 
     }
-    parameters {
-        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-        text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
-        booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
-        choice(name: 'CHOICE', choices: ['Dev', 'NonProd', 'Prod'], description: 'Pick something')
-        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+    // parameters {
+    //     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+    //     text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
+    //     booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
+    //     choice(name: 'CHOICE', choices: ['Dev', 'NonProd', 'Prod'], description: 'Pick something')
+    //     password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+    // }
+
+    input {
+        message "Should we continue?"
+        ok "Yes, we should."
+        submitter "alice,bob"
+        parameters {
+            string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+        }
     }
+
+
     triggers { pollSCM('*/1 * * * *') }
 
     stages {
