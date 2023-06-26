@@ -41,6 +41,7 @@ pipeline {
                 parameters {
                     string(name: 'PERSON', defaultValue: 'santhosh', description: 'Who should I say Hi to?')
                 }
+                
             }            
             steps {                 
                 echo  "This is stage two"
