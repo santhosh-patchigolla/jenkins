@@ -19,8 +19,8 @@ pipeline {
             steps {    
                     sh '''
                         echo DevOps Training
-                        echo AWS Training
-                        echo Batch54
+                        echo cloud Training
+                        echo new batch
                         echo Name of the URL is ${ENV_URL}
                         
                         env
