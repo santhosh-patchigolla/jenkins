@@ -49,7 +49,6 @@ pipeline {
         }
 
         stage('Stage THREE') {
-            when { branch 'main'}
             steps {                 
                 sh ''' 
                 echo "This is stage three"
@@ -61,7 +60,7 @@ pipeline {
         }
 
         stage('Stage four') {
-            when { branch 'master'}
+            when { branch 'main'}
             steps {                 
                 sh ''' 
                 echo "This is stage three"
