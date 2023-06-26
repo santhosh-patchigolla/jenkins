@@ -58,6 +58,16 @@ pipeline {
                 ''' 
             }
         }
+        stage('Stage four') {
+            // when { branch 'master'}
+            steps {                 
+                sh ''' 
+                echo "This is stage three"
+                echo "Name of the URL is ${ENV_URL}"
+
+                ''' 
+            }
+        }        
     }
 }
 
