@@ -12,7 +12,7 @@ pipeline {
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
 
-    triggers { pollSCM('*/1 * * * *') }
+    // triggers { pollSCM('*/1 * * * *') }
 
     stages {
         stage('Parallel Stages') {                      // this parallel stage will insure to runn stages paralled refer the stage name as parallel1 parallel2.
@@ -98,7 +98,7 @@ pipeline {
         }        
     }
 
-    post { 
+    post {                                         // This post will show that all the jobs are excuted properly its a kind of our reference and this "post" should be at the end of all the stages
         always { 
             echo 'I will always say Hello Guru!'
         }
