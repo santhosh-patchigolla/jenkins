@@ -98,7 +98,7 @@ pipeline {
         }        
     }
 
-    post {                                         // This post will show that all the jobs are excuted properly its a kind of our reference and this "post" should be at the end of all the stages
+    post {                                         // This post will show that all the jobs are excuted properly its a kind of our reference and this "post" should be at the end of all the stages FYU refer readme file
         always { 
             echo 'I will always say Hello Guru!'
         }
@@ -107,3 +107,6 @@ pipeline {
 }
 
 // no changes added but this change will run the Jenkins job.
+
+
+
