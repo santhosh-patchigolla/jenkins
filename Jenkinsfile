@@ -49,6 +49,16 @@ pipeline {
         }
 
         stage('Stage THREE') {
+        stage('Stage THREE') {
+            when { branch 'main'}
+            steps {                 
+                sh ''' 
+                echo "This is stage three"
+                echo "Name of the URL is ${ENV_URL}"
+
+                ''' 
+            }
+        }            
             steps {                 
                 sh ''' 
                 echo "This is stage three"
@@ -60,7 +70,6 @@ pipeline {
         }
 
         stage('Stage four') {
-            when { branch 'main'}
             steps {                 
                 sh ''' 
                 echo "This is stage three"
