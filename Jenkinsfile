@@ -98,6 +98,12 @@ pipeline {
         }        
     }
 
+    post { 
+        always { 
+            cleanWs()
+        }
+    }    
+
 }
 
 // no changes added but this change will run the Jenkins job.
