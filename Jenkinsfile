@@ -15,6 +15,28 @@ pipeline {
     // triggers { pollSCM('*/1 * * * *') }
 
     stages {
+        stage('Parallel Stages') {
+        parallel {
+            stage('In Parallel 1') {
+                    steps {
+                        echo "In Parallel 1"
+                        sh "sleep 2"
+                    }
+                }
+            stage('In Parallel 2') {
+                    steps {
+                        echo "In Parallel 2"
+                        sleep 2
+                }
+            }
+            stage('In Parallel 3') {
+                    steps {
+                        echo "In Parallel 3"
+                        sleep 2
+                }
+            }
+        }
+    }    
         stage('Stage One') {
             steps {    
                     sh '''
