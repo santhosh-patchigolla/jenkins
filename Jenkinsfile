@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    agent {
+        label 'work-station'
+    }
+
     environment {
         ENV_URL         = "pipeline.google.com"                  //  its a pipeline variable every stage can use it by using a variable
         SSHCRED         = credentials('SSH_CRED')                // took from manage jenkins> security> credentials  (here we can store the secrets in the 
