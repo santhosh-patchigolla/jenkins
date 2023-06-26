@@ -33,6 +33,7 @@ pipeline {
             environment {
                 ENV_URL = "stage.google.com"                  // Stage  variables declared here if we declared here means It wont take from pipeline variable(global varailble)
             }
+            
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
