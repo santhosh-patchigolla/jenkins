@@ -69,7 +69,7 @@ pipeline {
                 sh ''' 
                 echo "This is stage four"
                 echo "Name of the URL is ${ENV_URL}"
-
+                sleep 5
 
                 ''' 
             }
