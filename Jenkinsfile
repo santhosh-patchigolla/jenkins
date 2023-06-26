@@ -41,7 +41,7 @@ pipeline {
                 parameters {
                     string(name: 'PERSON', defaultValue: 'santhosh', description: 'Who should I say Hi to?')
                 }
-                
+
             }            
             steps {                 
                 echo  "This is stage two"
@@ -49,6 +49,7 @@ pipeline {
         }
 
         stage('Stage THREE') {
+            when { branch 'master'}
             steps {                 
                 sh ''' 
                 echo "This is stage three"
