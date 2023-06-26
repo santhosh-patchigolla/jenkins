@@ -12,7 +12,7 @@ pipeline {
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
 
-    triggers { pollSCM('*/1 * * * *') }
+    triggers { cron('*/1 * * * *') }
 
     stages {
         stage('Parallel Stages') {                      // this parallel stage will insure to runn stages paralled refer the stage name as parallel1 parallel2.
