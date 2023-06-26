@@ -33,8 +33,8 @@ pipeline {
             environment {
                 ENV_URL = "stage.google.com"                  // Stage  variables declared here if we declared here means It wont take from pipeline variable(global varailble)
             }
-            
-            input {
+
+            input {                                            // using this input we can break the state and ask for the valuer once you give it will run the stage of the pipeline
                 message "Should we continue?"
                 ok "Yes, we should."
                 submitter "alice,bob"
