@@ -47,8 +47,7 @@ pipeline {
                 echo  "This is stage two"
             }
         }
-
-        stage('Stage THREE') {
+        
         stage('Stage THREE') {
             when { 
                 branch 'main'
