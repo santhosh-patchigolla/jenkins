@@ -49,21 +49,24 @@ pipeline {
         }
 
         stage('Stage THREE') {
-            when { branch 'master'}
+            when { branch 'main'}
             steps {                 
                 sh ''' 
                 echo "This is stage three"
                 echo "Name of the URL is ${ENV_URL}"
 
+
                 ''' 
             }
         }
+
         stage('Stage four') {
             // when { branch 'master'}
             steps {                 
                 sh ''' 
                 echo "This is stage three"
                 echo "Name of the URL is ${ENV_URL}"
+
 
                 ''' 
             }
