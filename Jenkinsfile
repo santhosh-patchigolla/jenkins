@@ -102,8 +102,8 @@ pipeline {
     }
 
     post {                                         // This post will show that all the jobs are excuted its a kind of our reference and this "post" should be at the end of all the stages FYU refer readme file
-        always { 
-            cleanWs
+        aborted { 
+            echo 'I will always say Hello if its aborted!'
         }
     }    
 
