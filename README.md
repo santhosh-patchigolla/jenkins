@@ -35,3 +35,6 @@ Run the steps in this post condition after every other post condition has been e
 
 FYI To run the Jobs in the Jekins agent simple install the Java on the agents .
 > we can give the detail of the Jenkin agent in the Jenkins server
+
+
+

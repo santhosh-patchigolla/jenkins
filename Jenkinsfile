@@ -2,7 +2,6 @@ pipeline {
     agent {
         label 'work-station'
     }
-
     environment {
         ENV_URL         = "pipeline.google.com"                  //  its a pipeline variable every stage can use it by using a variable
         SSHCRED         = credentials('SSH_CRED')                // took from manage jenkins> security> credentials  (here we can store the secrets in the 
@@ -103,8 +102,8 @@ pipeline {
     }
 
     post {                                         // This post will show that all the jobs are excuted its a kind of our reference and this "post" should be at the end of all the stages FYU refer readme file
-        aborted { 
-            echo 'I will always say Hello if its aborted!'
+        always { 
+            cleanWs
         }
     }    
 
