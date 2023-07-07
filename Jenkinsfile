@@ -121,7 +121,7 @@ node {
            
         } else {
             echo 'Im executing elsewhere'
-             sh "env"
+            sh "env"
         }
     }
 }       
