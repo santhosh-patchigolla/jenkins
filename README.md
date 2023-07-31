@@ -36,5 +36,17 @@ Run the steps in this post condition after every other post condition has been e
 FYI To run the Jobs in the Jekins agent simple install the Java on the agents .
 > we can give the detail of the Jenkin agent in the Jenkins server
 
+If you want to add colours in the jenkins output for more visibiliy,You can use the ansi colour
+FYI
+pipeline {
+    agent any
+    options {
+        ansiColor('xterm')
+    }
+
+    options {
+        ansiColor('xterm')     /these 3 lines need to add below the pipeline
+    }
+
 
 
