@@ -50,3 +50,4 @@ pipeline {
 
 
 
+# Target grouping: is nothing but the grouping the similar resource in a single folder.
